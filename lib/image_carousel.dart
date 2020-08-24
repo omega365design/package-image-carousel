@@ -13,8 +13,8 @@ class Carousel extends StatefulWidget {
     this.expandable = false,
     this.noImagesString = 'No images',
     this.showPageIndicator = true,
-    this.inactivePageColor = const Color(0xFF00B3A6),
-    this.activePageColor = const Color(0xFFC4C4C4),
+    this.inactivePageColor = const Color(0xFFC4C4C4),
+    this.activePageColor = const Color(0xFF00B3A6),
   }) : super(key: key);
 
   final List<ImageProvider> images;

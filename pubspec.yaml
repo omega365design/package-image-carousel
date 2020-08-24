@@ -1,6 +1,6 @@
 name: image_carousel
 description: A very simple image carousel with transform effects and page indicators
-version: 0.2.1
+version: 0.2.2
 homepage: https://omegadesign.no
 repository: https://github.com/Omega-Design-AS/package-image-carousel
 publish_to: https://flutter-packages.appframe.com:4242
