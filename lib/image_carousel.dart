@@ -10,7 +10,10 @@ class Carousel extends StatefulWidget {
     this.images,
     this.fullImages,
     this.initialized,
-    this.expandable = false,
+    this.imageViewer = false,
+    this.imageViewerZoom = false,
+    this.imageViewerRotation = false,
+    this.imageViewerPan = false,
     this.noImagesString = 'No images',
     this.showPageIndicator = true,
     this.inactivePageColor = const Color(0xFFC4C4C4),
@@ -20,7 +23,10 @@ class Carousel extends StatefulWidget {
   final List<ImageProvider> images;
   final List<ImageProvider> fullImages;
   final String noImagesString;
-  final bool expandable;
+  final bool imageViewer;
+  final bool imageViewerZoom;
+  final bool imageViewerRotation;
+  final bool imageViewerPan;
   final Function(PageController) initialized;
   final bool showPageIndicator;
   final Color inactivePageColor;
@@ -92,7 +98,7 @@ class CarouselState extends State<Carousel> {
                   child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: OpenContainer(
-                        tappable: widget.expandable,
+                        tappable: widget.imageViewer,
                         closedElevation: 0,
                         closedColor: Colors.transparent,
                         closedBuilder: (context, action) => Image(
@@ -102,6 +108,9 @@ class CarouselState extends State<Carousel> {
                         openColor: Colors.transparent,
                         openBuilder: (context, action) => ImageViewer(
                           image: widget.fullImages[index],
+                          enableZoom: widget.imageViewerZoom,
+                          enableRotating: widget.imageViewerRotation,
+                          enablePan: widget.imageViewerPan,
                         ),
                         useRootNavigator: true,
                       )),
