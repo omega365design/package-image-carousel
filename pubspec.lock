@@ -70,10 +70,12 @@ packages:
   image_viewer:
     dependency: "direct main"
     description:
-      name: image_viewer
-      url: "https://flutter-packages.appframe.com:4242"
-    source: hosted
-    version: "0.2.0"
+      path: "."
+      ref: HEAD
+      resolved-ref: "241ec9e8e8984cde4688412f9f41109b7adafcad"
+      url: "https://github.com/Omega-Design-AS/package-image-viewer.git"
+    source: git
+    version: "0.2.1"
   matcher:
     dependency: transitive
     description:

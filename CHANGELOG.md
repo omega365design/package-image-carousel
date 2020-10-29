@@ -1,5 +1,9 @@
 # Image Carousel changelog
 
+## [0.2.4] - 10/28/2020
+
+* Using git links for dependencies
+
 ## [0.2.3] - 10/28/2020
 
 * Added options for the imageviewer in Carousel constructor
