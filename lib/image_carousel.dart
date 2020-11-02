@@ -118,7 +118,7 @@ class CarouselState extends State<Carousel> {
                             ),
                             Positioned(
                               top: 16.0,
-                              bottom: 16.0,
+                              right: 16.0,
                               child: MaterialButton(
                                 child: Icon(
                                   Icons.close,

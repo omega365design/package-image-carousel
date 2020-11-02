@@ -1,5 +1,9 @@
 # Image Carousel changelog
 
+## [0.2.6] - 11/02/2020
+
+* Moved close button to appropriate location
+
 ## [0.2.5] - 11/02/2020
 
 * Added close button on image viewer
