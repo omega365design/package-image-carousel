@@ -106,11 +106,35 @@ class CarouselState extends State<Carousel> {
                           fit: BoxFit.cover,
                         ),
                         openColor: Colors.transparent,
-                        openBuilder: (context, action) => ImageViewer(
-                          image: widget.fullImages[index],
-                          enableZoom: widget.imageViewerZoom,
-                          enableRotating: widget.imageViewerRotation,
-                          enablePan: widget.imageViewerPan,
+                        openBuilder: (context, action) => Stack(
+                          children: [
+                            Positioned.fill(
+                              child: ImageViewer(
+                                image: widget.fullImages[index],
+                                enableZoom: widget.imageViewerZoom,
+                                enableRotating: widget.imageViewerRotation,
+                                enablePan: widget.imageViewerPan,
+                              ),
+                            ),
+                            Positioned(
+                              top: 16.0,
+                              bottom: 16.0,
+                              child: MaterialButton(
+                                child: Icon(
+                                  Icons.close,
+                                  size: 32.0,
+                                  color: theme.accentColor,
+                                ),
+                                shape: CircleBorder(),
+                                minWidth: 0,
+                                padding: const EdgeInsets.all(8.0),
+                                color: const Color(0xCC000000),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ),
+                          ],
                         ),
                         useRootNavigator: true,
                       )),

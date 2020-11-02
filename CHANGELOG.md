@@ -1,6 +1,10 @@
 # Image Carousel changelog
 
-## [0.2.4] - 10/28/2020
+## [0.2.5] - 11/02/2020
+
+* Added close button on image viewer
+
+## [0.2.4] - 10/29/2020
 
 * Using git links for dependencies
 
